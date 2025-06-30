@@ -2,13 +2,13 @@
 
 AlgoBazaar is a modern, decentralized NFT marketplace built on the Algorand blockchain. It provides a seamless platform for users to mint, trade, stake, and swap digital assets with zero gas fees and lightning-fast transactions.
 
-- ##Live : 
+## Live : 
 
 ## 📱 Screenshots
 
 ![AlgoBazaar](https://github.com/Sravan466/AlgoBazaar/blob/main/ScreenShots/Screenshot%202025-06-30%20175710.png)
 
-- ##NFT Marketplace
+## NFT Marketplace
 
 ![AlgoBazaar](https://github.com/Sravan466/AlgoBazaar/blob/main/ScreenShots/Screenshot%202025-06-30%20175742.png)
 
