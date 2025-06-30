@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: algobazaar
+    env: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_ENVIRONMENT
+        value: mainnet
+      - key: NEXT_PUBLIC_ALGOD_TOKEN
+        value: 98D9CE80660AD243893D56D9F125CD2D
+      - key: NEXT_PUBLIC_ALGOD_SERVER
+        value: https://mainnet-api.4160.nodely.io
+      - key: NEXT_PUBLIC_INDEXER_TOKEN
+        value: 98D9CE80660AD243893D56D9F125CD2D
+      - key: NEXT_PUBLIC_INDEXER_SERVER
+        value: https://mainnet-idx.4160.nodely.io
+      - key: ALGOD_TOKEN
+        value: 98D9CE80660AD243893D56D9F125CD2D
+      - key: INDEXER_TOKEN
+        value: 98D9CE80660AD243893D56D9F125CD2D
+      - key: NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID
+        value: e01dc9525e6bf199e8ff376446a4c976
+      - key: PLATFORM_FEE_PERCENTAGE
+        value: 2.5
+      - key: PLATFORM_WALLET_ADDRESS
+        value: Z3JJIVPOBYUZMMDLKUB4AY25MDI2RSCNPYLMYYSXZNIU4J4DIY4ZF23BE4
+      - key: PINATA_API_KEY
+        value: 64c19a469112eee9a15e
+      - key: PINATA_SECRET_API_KEY
+        value: df107f8fdf064aecc7be5fdbf2ab1e543c1dbd8006d7ad024b4bb28ac31b8e54
+      - key: PINATA_JWT
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiIyMWJkMzg3OS1hZTNjLTQ0YjMtOTkwYy04MGE2ODlmMjBhMjUiLCJlbWFpbCI6InNyYXZhbmt1bWFycmVkZHk0NjZnQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaW5fcG9saWN5Ijp7InJlZ2lvbnMiOlt7ImRlc2lyZWRSZXBsaWNhdGlvbkNvdW50IjoxLCJpZCI6IkZSQTEifSx7ImRlc2lyZWRSZXBsaWNhdGlvbkNvdW50IjoxLCJpZCI6Ik5ZQzEifV0sInZlcnNpb24iOjF9LCJtZmFfZW5hYmxlZCI6ZmFsc2UsInN0YXR1cyI6IkFDVElWRSJ9.aJva4MSXWeQJQRtsWzjO3NNA1tH9Zff3-9YnzsxHynk
