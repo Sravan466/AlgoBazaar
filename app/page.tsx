@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -18,6 +18,11 @@ export default function Home() {
   const [selectedNFT, setSelectedNFT] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [purchasingNFT, setPurchasingNFT] = useState<number | null>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const featuredNFTs = [
     {
@@ -73,8 +78,8 @@ export default function Home() {
   };
 
   // Real NFT purchase implementation for homepage
-  const handleBuyNFT = async (nft: any) => {
-    if (!isConnected || !address) {
+  const handleBuyNFT = useCallback(async (nft: any) => {
+    if (!isClient || !isConnected || !address) {
       toast.error('Please connect your wallet first', {
         className: 'toast-premium',
       });
@@ -219,7 +224,7 @@ export default function Home() {
     } finally {
       setPurchasingNFT(null);
     }
-  };
+  }, [isClient, isConnected, address, signTransaction, signTransactions]);
 
   const stats = [
     { label: "Total Volume", value: "24.8M ALGO", icon: Coins, color: "from-blue-500 to-cyan-500", bgColor: "from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20" },
